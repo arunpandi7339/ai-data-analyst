@@ -1,0 +1,127 @@
+/* -------- GLOBAL -------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #f1f5f9;
+    margin: 0;
+    padding: 0;
+    /* ✅ Fix: merged both body blocks into one */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* -------- TITLE -------- */
+h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    /* ✅ Fix: background-color → background-clip text for gradient */
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* -------- UPLOAD BOX -------- */
+/* ✅ Fix: typo ".pload-box" → ".upload-box" */
+.upload-box {
+    padding: 0.5rem;
+}
+
+/* -------- CARD STYLE -------- */
+form, .box {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* -------- INPUT -------- */
+input[type="file"],
+input[type="text"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+    outline: none;
+    width: 60%;
+    background-color: rgba(241, 241, 241, 0.1);
+    color: #f1f5f9;
+}
+
+/* -------- BUTTON -------- */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+/* -------- STATUS -------- */
+#status {
+    margin-top: 10px;
+    color: #4ade80;
+}
+
+/* -------- ANSWER -------- */
+#answer {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #facc15;
+}
+
+/* -------- CHART TITLE -------- */
+h2 {
+    margin-top: 25px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* -------- CHART CONTAINER -------- */
+/* ✅ Fix: removed excess margin %, height reduced to fit screen */
+.chart-container {
+    width: 85%;
+    max-width: 700px;
+    height: 420px;
+    max-height: 420px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* -------- CANVAS -------- */
+/* ✅ Fix: canvas must fill container; removed invalid display:flex & fixed margins */
+canvas {
+    background: rgba(30, 44, 66, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box;
+}
+
+/* -------- HR -------- */
+hr {
+    width: 80%;
+    border: 1px solid #334155;
+    margin: 25px 0;
+}
