@@ -1,8 +1,11 @@
 from flask import Flask, request, render_template, jsonify
 import pandas as pd
 import os
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 

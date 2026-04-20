@@ -7,7 +7,6 @@ body {
     color: #f1f5f9;
     margin: 0;
     padding: 0;
-    /* ✅ Fix: merged both body blocks into one */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +17,6 @@ body {
 h1 {
     margin-top: 20px;
     font-size: 36px;
-    /* ✅ Fix: background-color → background-clip text for gradient */
     background: linear-gradient(90deg, #38bdf8, #818cf8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,7 +26,7 @@ h1 {
 }
 
 /* -------- UPLOAD BOX -------- */
-/* ✅ Fix: typo ".pload-box" → ".upload-box" */
+
 .upload-box {
     padding: 0.5rem;
 }
@@ -97,7 +95,7 @@ h2 {
 }
 
 /* -------- CHART CONTAINER -------- */
-/* ✅ Fix: removed excess margin %, height reduced to fit screen */
+
 .chart-container {
     width: 85%;
     max-width: 700px;
@@ -109,7 +107,7 @@ h2 {
 }
 
 /* -------- CANVAS -------- */
-/* ✅ Fix: canvas must fill container; removed invalid display:flex & fixed margins */
+
 canvas {
     background: rgba(30, 44, 66, 0.7);
     padding: 20px;
