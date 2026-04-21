@@ -1,4 +1,4 @@
-const api = "http://127.0.0.1:5000";
+const api = window.location.origin;
 
 let chart;
 let currentChart = "product";
